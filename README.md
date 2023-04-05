@@ -1,1 +1,1 @@
-# -Rest-TeacherAPI-Hibernate-JAX-RS
+# Rest-TeacherAPI-Hibernate-JAX-RS
