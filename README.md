@@ -1,1 +1,1 @@
-## Rest-TeacherAPI-Hibernate-JAX-RS
+## Rest service created with Java EE, Hibernate and  JAX-RS
