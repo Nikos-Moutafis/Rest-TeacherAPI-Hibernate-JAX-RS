@@ -22,7 +22,7 @@ public class TeacherServiceImpl implements ITeacherService{
     public Teacher insertTeacher(TeacherDTO teacherDTO) throws EntityAlreadyExistsException {
         Teacher teacher;
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             teacher = map(teacherDTO);
 
             if (teacherDTO.getId() == null){
@@ -31,9 +31,9 @@ public class TeacherServiceImpl implements ITeacherService{
                 throw new EntityAlreadyExistsException(Teacher.class, teacher.getId());
                 //teacher = teacherDAO.update(teacher);
             }
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityAlreadyExistsException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Insert teacher - " +
                     " rollback - entity already exists");
             throw e;
@@ -47,16 +47,16 @@ public class TeacherServiceImpl implements ITeacherService{
     public Teacher updateTeacher(TeacherDTO teacherDTO) throws EntityNotFoundException {
         Teacher teacherToUpdate;
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             teacherToUpdate = map(teacherDTO);
 
             if (teacherDAO.getById(teacherToUpdate.getId()) == null){
                 throw new EntityNotFoundException(Teacher.class, teacherToUpdate.getId());
             }
             teacherDAO.update(teacherToUpdate);
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Update rollback - Entity not found");
             throw  e;
         } finally {
@@ -68,15 +68,15 @@ public class TeacherServiceImpl implements ITeacherService{
     @Override
     public void deleteTeacher(Long id) throws EntityNotFoundException {
        try {
-           JPAHelper.beginTranscaction();
+           JPAHelper.beginTransaction();
            if (teacherDAO.getById(id) == null){
                throw new EntityNotFoundException(Teacher.class, id);
            }
 
            teacherDAO.delete(id);
-           JPAHelper.commitTranscaction();
+           JPAHelper.commitTransaction();
        }catch (EntityNotFoundException e){
-           JPAHelper.rollbackTranscaction();
+           JPAHelper.rollbackTransaction();
            LoggerUtil.getCurrentLogger().warning("Delete rollback");
            throw e;
        }finally {
@@ -89,15 +89,15 @@ public class TeacherServiceImpl implements ITeacherService{
         List<Teacher> teachers;
 
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             teachers = teacherDAO.getByLastName(lastname);
 
             if (teachers.size() == 0){
                 throw new EntityNotFoundException(List.class, 0L);
             }
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Get Teacher rollback " +
                     " - Teacher not found");
             throw e;
@@ -111,15 +111,15 @@ public class TeacherServiceImpl implements ITeacherService{
     public Teacher getTeacherById(Long id) throws EntityNotFoundException {
         Teacher teacher;
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             teacher = teacherDAO.getById(id);
 
             if (teacher == null){
                 throw new EntityNotFoundException(Teacher.class,id);
             }
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Get Teacher by id rollback " +
                     " - Teacher not found");
             throw e;

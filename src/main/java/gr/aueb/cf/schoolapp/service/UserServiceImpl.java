@@ -11,7 +11,6 @@ import gr.aueb.cf.schoolapp.service.util.LoggerUtil;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.ext.Provider;
-import java.util.IllegalFormatCodePointException;
 import java.util.List;
 
 @Provider
@@ -24,7 +23,7 @@ public class UserServiceImpl implements IUserService{
     public User insertUser(UserCredentialsDTO userDTO) throws EntityAlreadyExistsException {
         User user;
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             user = map(userDTO);
 
             if (userDTO.getId() == null){
@@ -33,9 +32,9 @@ public class UserServiceImpl implements IUserService{
                 throw new EntityAlreadyExistsException(User.class, user.getId());
             }
 
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityAlreadyExistsException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Insert User - " +
                     " rollback - entity already exists");
             throw e;
@@ -50,16 +49,16 @@ public class UserServiceImpl implements IUserService{
         User userToUpdate;
 
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             userToUpdate = map(dto);
 
             if (userDAO.getById(userToUpdate.getId()) == null){
                 throw new EntityNotFoundException(User.class, userToUpdate.getId());
             }
             userDAO.update(userToUpdate);
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
             LoggerUtil.getCurrentLogger().warning("Update rollback - Entity not found");
             throw e;
         }finally {
@@ -71,14 +70,14 @@ public class UserServiceImpl implements IUserService{
     @Override
     public void deleteUser(Long id) throws EntityNotFoundException {
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             if (userDAO.getById(id) == null){
                 throw new EntityNotFoundException(User.class, id);
             }
             userDAO.delete(id);
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Delete rollback - Entity not found");
         }finally {
             JPAHelper.closeEntityManager();
@@ -91,16 +90,16 @@ public class UserServiceImpl implements IUserService{
         List<User> users;
 
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
 
             users = userDAO.getByUsername(username);
 
             if (users.size() == 0){
                 throw new EntityNotFoundException(User.class, 0L);
             }
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Get user rollback " +
                     "- User not found");
             throw e;
@@ -114,15 +113,15 @@ public class UserServiceImpl implements IUserService{
     public User getUserById(Long id) throws EntityNotFoundException {
         User user;
         try {
-            JPAHelper.beginTranscaction();
+            JPAHelper.beginTransaction();
             user = userDAO.getById(id);
 
             if (user == null){
                 throw new EntityNotFoundException(User.class, id);
             }
-            JPAHelper.commitTranscaction();
+            JPAHelper.commitTransaction();
         }catch (EntityNotFoundException e){
-            JPAHelper.rollbackTranscaction();
+            JPAHelper.rollbackTransaction();
             LoggerUtil.getCurrentLogger().warning("Get user by id rollback " +
                     " -user not found");
             throw e;

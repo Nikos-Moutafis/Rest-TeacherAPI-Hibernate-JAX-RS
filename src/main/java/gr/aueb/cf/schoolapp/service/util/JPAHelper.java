@@ -29,13 +29,13 @@ public class JPAHelper {
     public static void closeEntityManager(){
         getEntityManager().close();
     }
-    public static void beginTranscaction(){
+    public static void beginTransaction(){
         getEntityManager().getTransaction().begin();
     }
-    public static void commitTranscaction(){
+    public static void commitTransaction(){
         getEntityManager().getTransaction().commit();
     }
-    public static void rollbackTranscaction(){
+    public static void rollbackTransaction(){
         getEntityManager().getTransaction().rollback();
     }
     public static void closeEMF(){
