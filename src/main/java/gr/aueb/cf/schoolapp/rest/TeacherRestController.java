@@ -33,6 +33,7 @@ public class TeacherRestController {
             return Response.status(Response.Status.NOT_FOUND).entity("NOT FOUND").build();
         }
     }
+
     @Path("/{teacherId}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)

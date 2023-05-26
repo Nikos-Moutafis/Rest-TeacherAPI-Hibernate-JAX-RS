@@ -10,5 +10,4 @@ public interface ITeacherDAO {
     void delete(Long id);
     List<Teacher> getByLastName(String lastname);
     Teacher getById(Long id);
-
 }
