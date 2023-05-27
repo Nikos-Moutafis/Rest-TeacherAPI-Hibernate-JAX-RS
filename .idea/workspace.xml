@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b393b1b1-b413-4757-8869-b0419ca0c63f" name="Changes" comment="refactor beans">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +193,7 @@
       <workItem from="1681477750558" duration="41000" />
       <workItem from="1682639095962" duration="112000" />
       <workItem from="1685109718727" duration="11241000" />
-      <workItem from="1685200304251" duration="2178000" />
+      <workItem from="1685200304251" duration="5618000" />
     </task>
     <task id="LOCAL-00001" summary="refactor beans">
       <created>1685111563598</created>
@@ -224,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685121245475</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor beans">
+      <created>1685202760921</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685202760921</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -12,7 +12,7 @@ public class LoggerUtil {
     private static final Logger logger = Logger.getLogger(LoggerUtil.class.getName());
 
     static {
-        SLF4JBridgeHandler.install(); // Installs the bridge (JUL-to_SLF) Handler
+        SLF4JBridgeHandler.install(); // Installs the bridge between (JUL-to_SLF) Handler
         Handler fileHandler;
         try {
             fileHandler = new FileHandler("cf.log", true);  // true for update the file
