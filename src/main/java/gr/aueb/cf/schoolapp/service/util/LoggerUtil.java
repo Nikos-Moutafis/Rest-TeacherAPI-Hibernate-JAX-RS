@@ -12,11 +12,11 @@ public class LoggerUtil {
     private static final Logger logger = Logger.getLogger(LoggerUtil.class.getName());
 
     static {
-        SLF4JBridgeHandler.install(); // Installs the bridge between (JUL-to_SLF) Handler
-        Handler fileHandler;
+        SLF4JBridgeHandler.install(); // Installs the bridge between (JUL - to_SLF) Handler
+        Handler fileHandler;         // file handler for logging in file
         try {
-            fileHandler = new FileHandler("cf.log", true);  // true for update the file
-            fileHandler.setFormatter(new SimpleFormatter());
+            fileHandler = new FileHandler("cf.log", true);  // true for update the file, default is false and would
+            fileHandler.setFormatter(new SimpleFormatter());              // create the file from beginning
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
