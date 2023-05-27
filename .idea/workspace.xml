@@ -11,9 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b393b1b1-b413-4757-8869-b0419ca0c63f" name="Changes" comment="refactor beans">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/dao/ITeacherDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/dao/ITeacherDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/rest/TeacherRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/rest/TeacherRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/service/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/service/TeacherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,21 +56,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikos/IdeaProjects/schoolapp-hibernate-jaxrs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/nikos/dev-spring-boot/spring-thymeleaf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nikos\IdeaProjects\schoolapp-hibernate-jaxrs\src\main\java\gr\aueb\cf\schoolapp\service\util" />
@@ -195,7 +193,8 @@
       <workItem from="1681476143526" duration="27000" />
       <workItem from="1681477750558" duration="41000" />
       <workItem from="1682639095962" duration="112000" />
-      <workItem from="1685109718727" duration="10527000" />
+      <workItem from="1685109718727" duration="11241000" />
+      <workItem from="1685200304251" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="refactor beans">
       <created>1685111563598</created>
@@ -218,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685112939822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor beans">
+      <created>1685121245475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685121245475</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
