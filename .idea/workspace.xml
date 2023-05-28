@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b393b1b1-b413-4757-8869-b0419ca0c63f" name="Changes" comment="refactor beans">
+    <list default="true" id="b393b1b1-b413-4757-8869-b0419ca0c63f" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/rest/TeacherRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/schoolapp/rest/TeacherRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1681477750558" duration="41000" />
       <workItem from="1682639095962" duration="112000" />
       <workItem from="1685109718727" duration="11241000" />
-      <workItem from="1685200304251" duration="5618000" />
+      <workItem from="1685200304251" duration="10871000" />
     </task>
     <task id="LOCAL-00001" summary="refactor beans">
       <created>1685111563598</created>
@@ -230,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685202760921</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor">
+      <created>1685210304765</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685210304765</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor">
+      <created>1685210556684</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685210556684</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +264,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor beans" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor beans" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

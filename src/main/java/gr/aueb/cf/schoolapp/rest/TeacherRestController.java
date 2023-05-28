@@ -16,6 +16,7 @@ import java.util.List;
 public class TeacherRestController {
     @Inject
     private ITeacherService teacherService;
+
     @Path("/")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
